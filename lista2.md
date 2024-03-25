@@ -257,14 +257,17 @@ ______
  escrever <- escreva sua idade
 
  se(idade < 16){
+
     imprima('você não pode votar)
  }
 
  senão se(16<=idade>18){
+
     imprima('voto é facultativo!')
  }
 
  senão{
+
     imprima('voto obrigatório')
  }
 
@@ -335,18 +338,32 @@ resolução:
 
 função CalcularTepo(velocidadeInicial, aceleração){
     tempo = 0
+
     tempoMaximo = x
+
     velocidadeMaxima = y
+
     distancia = z
+
     enquanto(tempo <= tempoMaximo){
+
         velocidadeAtual = velocidadeInicial + aceleracao*tempo
+
         distanciaPercorrida = velocidadeAtual * tempo
+
         se(velocidadeAtual > velocidadeMaxima){
+
             imprima('Você excedeu a velocidade máxima, faça o teste novamente começando com uma velocidade inicial menor')
-        } senão se(tempo > tempoMaximo){
+
+        } 
+        
+        senão se(tempo > tempoMaximo){
+
             imprima('Você excedeu o tempo máximo de corrida, faça o teste novamente começando com uma velocidade inicial menor')
         } 
-        se (distanciaPercorrida = distanciaDaCorrida ){
+
+        senão (distanciaPercorrida = distanciaDaCorrida ){
+
             imprima('você concluiu a corrida em', + tempo)
         }
         tempo++
@@ -385,20 +402,32 @@ ImprimirMatriz(matrizSoma)
 resolução:
 
 Função ProdutoMatrizes(matrizA, matrizB){
+
     se( colunasDeA != linhasDeB){
+
         imprima('As matrizes não podem ser multiplicadas')
-    } senão{
+
+    } 
+
+    senão{
         linhas = tamanho matrizA
+
         colunas = tamanho MatrizB[0]
 
         resultado = novaMatriz(linhas, colunas)
 
         para(i = 0; i = linhas - 1; i ++){
-            para(j = 0; j = colunas - 1; j ++){
+
+        para(j = 0; j = colunas - 1; j ++){
+
                soma = 0
+
                para(z = 0; z = tamanho MatrizA[0] - 1; z++){
+
                 soma = matrizA[i][z] * matrizB[z][j]
+
                }
+               
                resultado[i][j] = soma
             }
         }
